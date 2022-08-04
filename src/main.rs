@@ -10,7 +10,13 @@ use rocket::fs::{FileServer, relative};
 
 #[post("/start")]
 async fn start() -> &'static str {
+    send_start_command();
     "Success"
+}
+
+
+fn send_start_command() {
+    
 }
 
 #[launch]
