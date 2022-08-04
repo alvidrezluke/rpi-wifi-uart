@@ -6,9 +6,9 @@ set -o pipefail
 set -o xtrace
 
 readonly TARGET_HOST=pi@raspberrypi
-readonly TARGET_PATH=/home/pi/hello-world
+readonly TARGET_PATH=/home/pi/rpi-wifi-uart
 readonly TARGET_ARCH=arm-unknown-linux-gnueabihf
-readonly SOURCE_PATH=./target/${TARGET_ARCH}/release/hello-world
+readonly SOURCE_PATH=./target/${TARGET_ARCH}/release/rpi-wifi-uart
 
 cargo build --release --target=${TARGET_ARCH}
 rsync ${SOURCE_PATH} ${TARGET_HOST}:${TARGET_PATH}
